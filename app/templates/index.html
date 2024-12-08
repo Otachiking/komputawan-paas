@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Circle Calculator</h1>
+    <form method="POST">
+        <label for="radius">Enter radius:</label>
+        <input type="number" name="radius" id="radius" step="0.01" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result %}
+    <h2>Results</h2>
+    <p>Radius: {{ radius }}</p>
+    <p>Circumference: {{ circumference }}</p>
+    <p>Area: {{ area }}</p>
+    {% endif %}
+</body>
+</html>
